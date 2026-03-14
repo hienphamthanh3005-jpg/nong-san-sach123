@@ -1,0 +1,91 @@
+/* ... [Giữ nguyên CSS cũ đến hết USP Section] ... */
+
+/* Section Sản Phẩm (MỚI CẬP NHẬT) */
+.products { padding: 80px 0; background-color: #f0f7f0; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.product-card:hover { transform: translateY(-5px); }
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info { padding: 20px; text-align: center; }
+.product-info h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--text-dark); }
+.product-info .price { font-size: 1.2rem; font-weight: 700; color: var(--primary-green); margin-bottom: 15px; }
+.product-info .old-price { font-size: 1rem; color: #888; text-decoration: line-through; margin-left: 10px; font-weight: 400; }
+.product-info .view-details { padding: 10px 20px; font-size: 0.9rem; }
+
+/* MODAL CHI TIẾT SẢN PHẨM (MỚI THÊM) */
+.modal {
+    display: none; /* Ẩn theo mặc định */
+    position: fixed;
+    z-index: 2000; /* Nằm trên Navbar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Cho phép cuộn nếu nội dung dài */
+    background-color: rgba(0,0,0,0.6); /* Nền mờ */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto; /* 10% từ trên xuống, căn giữa */
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    animation: modalFadeIn 0.4s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover { color: var(--accent-orange); }
+
+/* Chi tiết sản phẩm trong Modal */
+#modalProductDetails { display: flex; gap: 30px; align-items: start; }
+#modalProductDetails img { width: 100%; max-width: 350px; border-radius: 10px; }
+#modalProductDetails h2 { font-size: 2rem; color: var(--text-dark); margin-bottom: 15px; }
+#modalProductDetails .price { font-size: 1.5rem; color: var(--primary-green); margin-bottom: 20px; }
+#modalProductDetails p { margin-bottom: 15px; }
+#modalProductDetails ul { margin-left: 20px; margin-bottom: 20px; list-style: circle; }
+
+/* Responsive cho Modal & Sản Phẩm */
+@media (max-width: 768px) {
+    /* ... [Giữ nguyên CSS responsive cũ] ... */
+    
+    #modalProductDetails { flex-direction: column; text-align: center; }
+    #modalProductDetails img { max-width: 100%; margin: 0 auto 20px auto; }
+}

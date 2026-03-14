@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nông Sản Sạch - Tươi Mới Từ Vườn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span class="icon-leaf">🍃</span> Nông Sản <span>Sạch</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#products">Sản phẩm</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Gói Trọn Vị Tươi Từ Vườn, <br>Cho Bữa Cơm Nhà Thêm An Nhiên</h1>
+                <p>Nông sản hữu cơ chuẩn VietGAP, hái mới và giao tận tay chỉ trong 2 giờ. Chúng tôi thay bạn chăm chút từng bữa ăn sạch, nói không với chất bảo quản.</p>
+                <a href="#products" class="cta-button">NHẬN THỰC ĐƠN TƯƠI SẠCH NGAY</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000" alt="Nông Sản Tươi Sạch">
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product="1">
+                    <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?q=80&w=600&auto=format&fit=crop" alt="Combo Gia Đình">
+                    <div class="product-info">
+                        <h3>Combo Gia Đình "An Nhiên"</h3>
+                        <p class="price">350.000đ <span class="old-price">450.000đ</span></p>
+                        <button class="view-details cta-button">Xem Chi Tiết</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product="2">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop" alt="Combo Ăn Dặm">
+                    <div class="product-info">
+                        <h3>Combo Ăn Dặm "Bé Khỏe"</h3>
+                        <p class="price">220.000đ <span class="old-price">280.000đ</span></p>
+                        <button class="view-details cta-button">Xem Chi Tiết</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="usp">
+        <div class="container">
+            <h2 class="section-title">Cam Kết Chất Lượng</h2>
+            <div class="usp-grid">
+                <div class="usp-item card-khong">
+                    <h3>3 KHÔNG</h3>
+                    <ul>
+                        <li>🚫 Không thuốc trừ sâu</li>
+                        <li>🚫 Không chất bảo quản</li>
+                        <li>🚫 Không biến đổi gen</li>
+                    </ul>
+                </div>
+                <div class="usp-item card-co">
+                    <h3>3 CÓ</h3>
+                    <ul>
+                        <li>✅ Có nguồn gốc rõ ràng</li>
+                        <li>✅ Có kiểm định định kỳ</li>
+                        <li>✅ Có hỗ trợ đổi trả</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2026 Nông Sản Sạch. Sức khỏe gia đình là ưu tiên hàng đầu.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalProductDetails">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
